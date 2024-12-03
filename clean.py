@@ -39,7 +39,7 @@ def getFilenames(dir):
 
 ROOT = os.getcwd()
 
-audioDir = os.path.join(ROOT, "input")
+audioDir = os.path.join(ROOT, "audio")
 outputDir = os.path.join(ROOT, "output")
 
 os.makedirs(outputDir, exist_ok=True)
