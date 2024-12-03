@@ -50,7 +50,6 @@ for file in files:
     filepath, showname, filename = file
     start_time = time.time()
     completed = getFilenames(outputDir)
-    filepath, showname, filename = file
     output_dir = os.path.join(ROOT, "output", showname)
     os.makedirs(output_dir, exist_ok=True)
     output_filename = os.path.join(ROOT, output_dir, filename)
