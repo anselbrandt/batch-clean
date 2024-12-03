@@ -1,8 +1,6 @@
-import logging
 import os
 import time
-
-from utils import pipeline, getCleanAudio, saveAudio
+import logging
 
 stream_handler = logging.StreamHandler()
 stream_handler.setLevel(logging.INFO)
@@ -13,6 +11,8 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[logging.FileHandler("logs.txt"), stream_handler],
 )
+
+from utils import pipeline, getCleanAudio, saveAudio
 
 
 def getFiles(dir):
