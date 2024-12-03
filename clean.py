@@ -40,7 +40,7 @@ def getFilenames(dir):
 ROOT = os.getcwd()
 
 audioDir = os.path.join(ROOT, "audio")
-outputDir = os.path.join(ROOT, "output")
+outputDir = os.path.join(ROOT, "clean")
 
 os.makedirs(outputDir, exist_ok=True)
 
@@ -50,9 +50,9 @@ for file in files:
     filepath, showname, filename = file
     start_time = time.time()
     completed = getFilenames(outputDir)
-    output_dir = os.path.join(ROOT, "output", showname)
+    output_dir = os.path.join(outputDir, showname)
     os.makedirs(output_dir, exist_ok=True)
-    output_filename = os.path.join(ROOT, output_dir, filename)
+    output_filename = os.path.join(output_dir, filename)
     if output_filename not in completed:
         cleanAudio, samplerate = getCleanAudio(filepath, pipeline)
         saveAudio(output_filename, cleanAudio, samplerate)
